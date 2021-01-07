@@ -31,7 +31,7 @@ namespace Vidly.Controllers
 		[Route("Details/{Id}")]
 		public ActionResult Details(int id, string name)
 		{
-			var customers = _context.Customers;
+			var customers = _context.Customers.Include(c => c.MembershipType);
 			foreach (var customer in customers)
 				if (customer.Id == id)
 					return View(customer);
