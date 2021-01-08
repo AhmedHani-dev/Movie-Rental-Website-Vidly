@@ -28,8 +28,8 @@ namespace Vidly.Controllers
 			return View(customers);
 		}
 
-		[Route("Details/{Id}")]
-		public ActionResult Details(int id, string name)
+		[Route("Customers/Details/{Id}")]
+		public ActionResult Details(int id)
 		{
 			var customers = _context.Customers.Include(c => c.MembershipType);
 			foreach (var customer in customers)

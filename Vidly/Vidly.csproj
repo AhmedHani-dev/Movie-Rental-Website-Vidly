@@ -269,6 +269,30 @@
     <Compile Include="Migrations\202101071912040_AddBirthdateToCustomer.Designer.cs">
       <DependentUpon>202101071912040_AddBirthdateToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101072358367_AddMoviesDB.cs" />
+    <Compile Include="Migrations\202101072358367_AddMoviesDB.Designer.cs">
+      <DependentUpon>202101072358367_AddMoviesDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101080018443_UpdateMovieClass.cs" />
+    <Compile Include="Migrations\202101080018443_UpdateMovieClass.Designer.cs">
+      <DependentUpon>202101080018443_UpdateMovieClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101080038001_AddGenreClass.cs" />
+    <Compile Include="Migrations\202101080038001_AddGenreClass.Designer.cs">
+      <DependentUpon>202101080038001_AddGenreClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101080047485_DeleteGenre.cs" />
+    <Compile Include="Migrations\202101080047485_DeleteGenre.Designer.cs">
+      <DependentUpon>202101080047485_DeleteGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101080049485_AddGenreClassAgain.cs" />
+    <Compile Include="Migrations\202101080049485_AddGenreClassAgain.Designer.cs">
+      <DependentUpon>202101080049485_AddGenreClassAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101080053540_PopulateGenre.cs" />
+    <Compile Include="Migrations\202101080053540_PopulateGenre.Designer.cs">
+      <DependentUpon>202101080053540_PopulateGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
@@ -278,6 +302,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -321,6 +346,7 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Movie\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movie\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -366,6 +392,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101071912040_AddBirthdateToCustomer.resx">
       <DependentUpon>202101071912040_AddBirthdateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101072358367_AddMoviesDB.resx">
+      <DependentUpon>202101072358367_AddMoviesDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101080018443_UpdateMovieClass.resx">
+      <DependentUpon>202101080018443_UpdateMovieClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101080038001_AddGenreClass.resx">
+      <DependentUpon>202101080038001_AddGenreClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101080047485_DeleteGenre.resx">
+      <DependentUpon>202101080047485_DeleteGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101080049485_AddGenreClassAgain.resx">
+      <DependentUpon>202101080049485_AddGenreClassAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101080053540_PopulateGenre.resx">
+      <DependentUpon>202101080053540_PopulateGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
