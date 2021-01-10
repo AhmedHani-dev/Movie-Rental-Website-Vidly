@@ -1,4 +1,4 @@
-﻿@model List<Vidly.Models.Customer>
+﻿@model IEnumerable<Vidly.Models.Customer>
 
 @{
     ViewBag.Title = "Customers";
@@ -17,7 +17,7 @@
         @foreach(var customer in Model)
         {
             <tr>
-                <td>@Html.ActionLink(customer.Name, "Details", "Customers", new { customer.Id }, null)</td>
+                <td>@Html.ActionLink(customer.Name, "Edit", "Customers", new { customer.Id }, null)</td>
                 <td>@customer.MembershipType.Name</td>
             </tr>
         }

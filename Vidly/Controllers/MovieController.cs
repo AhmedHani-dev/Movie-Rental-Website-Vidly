@@ -30,7 +30,7 @@ namespace Vidly.Controllers
 		[Route("Movie/Details/{Id}")]
 		public ActionResult Details(int Id)
 		{
-			var movie = _context.Movies.Include(c => c.Genre).FirstOrDefault(c => c.Id == Id);
+			var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == Id);
 			return View(movie);
 		}
 	}
