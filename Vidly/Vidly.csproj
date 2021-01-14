@@ -232,7 +232,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\MyDbContext.cs" />
+    <Compile Include="Models\MyDbContext.cs" />
     <Compile Include="Migrations\202101061745172_InitialModel.cs" />
     <Compile Include="Migrations\202101061745172_InitialModel.Designer.cs">
       <DependentUpon>202101061745172_InitialModel.cs</DependentUpon>
@@ -313,8 +313,8 @@
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\ValidationModels\Min18YearsIfAMember.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValidationModels\Min18YearsIfAMember.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
     <Compile Include="ViewModels\MovieFormViewModel.cs" />
   </ItemGroup>
