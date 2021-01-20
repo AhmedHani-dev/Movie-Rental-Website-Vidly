@@ -10,10 +10,10 @@ using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
-	public class MovieController : Controller
+	public class MoviesController : Controller
 	{
 		private MyDbContext _context;
-		public MovieController()
+		public MoviesController()
 		{
 			_context = new MyDbContext();
 		}

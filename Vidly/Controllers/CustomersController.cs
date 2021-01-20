@@ -12,19 +12,20 @@ namespace Vidly.Controllers
 	public class CustomersController : Controller
 	{
 		private MyDbContext _context;
+		
 		public CustomersController()
 		{
 			_context = new MyDbContext();
 		}
+		
 		protected override void Dispose(bool disposing)
 		{
 			_context.Dispose();
 		}
-		// GET: Customers
+
 		public ActionResult Index()
 		{
 			var customers = _context.Customers.Include(c => c.MembershipType).ToList();
-			//can be _context.Customers.Include("MemberShipType").ToList();
 			return View(customers);
 		}
 
