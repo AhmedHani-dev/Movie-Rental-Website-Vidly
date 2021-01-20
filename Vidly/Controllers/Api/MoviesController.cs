@@ -25,9 +25,9 @@ namespace Vidly.Controllers.Api
 			_context.Dispose();
 		}
 
-		public IEnumerable<MovieDto> GetMovies()
+		public IHttpActionResult GetMovies()
 		{
-			return _context.Movies.ToList().Select(Mapper.Map<Movie, MovieDto>);
+			return Ok(_context.Movies.ToList().Select(Mapper.Map<Movie, MovieDto>));
 		}
 
 		public IHttpActionResult GetMovie(int Id)

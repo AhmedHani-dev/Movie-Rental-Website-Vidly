@@ -25,9 +25,9 @@ namespace Vidly.Controllers.Api
 			_context.Dispose();
 		}
 
-		public IEnumerable<CustomerDto> GetCustomers()
+		public IHttpActionResult GetCustomers()
 		{
-			return _context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>);
+			return Ok(_context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>));
 		}
 
 		public IHttpActionResult GetCustomer(int id)
