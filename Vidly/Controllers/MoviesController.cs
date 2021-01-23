@@ -13,19 +13,20 @@ namespace Vidly.Controllers
 	public class MoviesController : Controller
 	{
 		private MyDbContext _context;
+		
 		public MoviesController()
 		{
 			_context = new MyDbContext();
 		}
+		
 		protected override void Dispose(bool disposing)
 		{
 			_context.Dispose();
 		}
-		// GET: Movie
+
 		public ActionResult Index()
 		{
-			var movies = _context.Movies.Include(m => m.Genre).ToList();
-			return View(movies);
+			return View();
 		}
 
 		public ActionResult New()
@@ -71,7 +72,7 @@ namespace Vidly.Controllers
 				movieInDb.NumberInStock = movie.NumberInStock;
 			}
 			_context.SaveChanges();
-			return RedirectToAction("Index", "Movie");
+			return RedirectToAction("Index", "Movies");
 		}
 
 		[Route("Movie/Details/{Id}")]
