@@ -14,11 +14,11 @@ namespace Vidly.Controllers.Api
 {
 	public class MoviesController : ApiController
 	{
-		private MyDbContext _context;
+		private ApplicationDbContext _context;
 
 		public MoviesController()
 		{
-			_context = new MyDbContext();
+			_context = new ApplicationDbContext();
 		}
 
 		protected override void Dispose(bool disposing)
