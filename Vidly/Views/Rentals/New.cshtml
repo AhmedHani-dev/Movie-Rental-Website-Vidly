@@ -4,7 +4,7 @@
 }
 
 <h2>New Rental Form</h2>
-<form action="">
+<form id="newRental">
     <div class="form-group">
         <label>Customer</label>
         <div class="tt-container">
@@ -31,7 +31,7 @@
 {
     <script>
         var viewModel = {
-            movieIds: []
+            moviesIds: []
         };
 
         var customers = new Bloodhound({
@@ -51,8 +51,7 @@
             display: 'name',
             source: customers
         }).on("typeahead:select", function (e, customer) {
-            viewmodel.customerId = customer.id;
-            console.log(viewmodel);
+            viewModel.customerId = customer.id;
         });
 
         var movies = new Bloodhound({
@@ -75,7 +74,22 @@
             $("#movies").append("<li class='list-group-item'>" + movie.name + "</li>");
             $("#movie").typeahead("val", "");
 
-            viewModel.movieIds.push(movie.id);
+            viewModel.moviesIds.push(movie.id);
+        });
+
+        $("#newRental").submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: "/api/rentals",
+                method: "post",
+                data: viewModel
+            })
+                .done(function () {
+                    toastr.success("Rentals Successfully Recorded.");
+                })
+                .fail(function () {
+                    toastr.error("Something Unexpected Happened.");
+                });
         });
     </script>
 }
