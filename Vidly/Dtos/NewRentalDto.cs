@@ -1,24 +1,11 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
 
 namespace Vidly.Models
 {
 	public class NewRentalDto
 	{
-		public int Id { get; set; }
-
-		[Required]
-		public Customer Customer { get; set; }
-
 		public int CustomerId { get; set; }
 
-		[Required]
-		public Movie Movie { get; set; }
-
-		public int MovieId { get; set; }
-
-		public DateTime DateRented { get; set; }
-
-		public DateTime? DateReturned { get; set; }
+		public List<int> MoviesIds { get; set; }
 	}
 }
